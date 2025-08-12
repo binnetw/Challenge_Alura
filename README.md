@@ -10,6 +10,22 @@ Este es un proyecto simple para realizar el sorteo del "Amigo Secreto". Permite 
 -   **Reiniciar:** Limpia la lista de participantes y el resultado para comenzar un nuevo sorteo.
 -   **Interfaz Sencilla:** Una interfaz de usuario limpia y fácil de usar.
 
+## 📂 Cómo Clonar el Repositorio
+
+Para obtener una copia local de este proyecto y ejecutarlo en tu propia máquina, sigue estos sencillos pasos.
+
+1.  **Clona el repositorio:** Abre tu terminal o Git Bash y ejecuta el siguiente comando.
+
+    ```bash
+    git clone https://binnetw.github.io/Challenge_Alura/
+    ```
+
+2.  **Navega a la carpeta del proyecto:**
+    ```bash
+    cd challenge-amigo-secreto_esp-main
+    ```
+3.  **Abre la aplicación:** Simplemente abre el archivo `index.html` en tu navegador web favorito.
+
 ## 🚀 Instrucciones de Uso
 
 1.  Abre el archivo `index.html` en tu navegador web preferido.
@@ -25,6 +41,29 @@ Este es un proyecto simple para realizar el sorteo del "Amigo Secreto". Permite 
 -   **HTML5:** Para la estructura de la página.
 -   **CSS3:** Para los estilos y el diseño visual.
 -   **JavaScript:** Para toda la lógica funcional de la aplicación.
+
+## 🧠 Lógica Clave del Sorteo
+
+La función principal del sorteo utiliza `Math.random()` para generar un índice aleatorio basado en la cantidad de amigos en la lista.
+
+Aquí un fragmento del código que lo hace posible:
+
+```javascript
+function sortearAmigo() {
+    // Valida que haya amigos en la lista
+    if (amigos.length === 0) {
+        alert('No hay amigos para sortear.');
+        return;
+    }
+
+    // Genera un índice aleatorio
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    const amigoSeleccionado = amigos[indiceAleatorio];
+
+    // Muestra el resultado en pantalla
+    mostrarResultado(amigoSeleccionado);
+}
+```
 
 ---
 

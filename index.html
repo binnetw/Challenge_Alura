@@ -26,6 +26,13 @@
            
             <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
+<!-- Busca donde tienes tu botón de sortear y agrega el nuevo botón -->
+<div class="card__buttons">
+    <button onclick="agregarAmigo()" class="button">Agregar</button>
+    <button class="button-draw">Sortear</button>
+    <!-- Este es el nuevo botón que debes agregar -->
+    <button class="button-restart">Reiniciar</button>
+</div>
 
             <div class="button-container">
                 <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">

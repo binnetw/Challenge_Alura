@@ -57,3 +57,12 @@ document.getElementById("amigo").addEventListener("keydown", function(event) {
         agregarAmigo();
     }
 });
+
+function reiniciarJuego() {
+    amigos.length = 0;
+    document.getElementById("listaAmigos").innerHTML = "";
+    document.getElementById("resultado").innerHTML = "";
+}
+
+// Agrega un evento al botón de reiniciar.
+document.querySelector(".button-restart").addEventListener("click", reiniciarJuego);
